@@ -78,7 +78,9 @@
 };
 
 &eth1 {
-	compatible = "qca,ar7241-eth", "syscon", "simple-mfd";
+	status = "okay";
+
+	compatible = "qca,ar7241-eth", "syscon";
 
 	pll-data = <0x00110000 0x00001099 0x00991099>;
 

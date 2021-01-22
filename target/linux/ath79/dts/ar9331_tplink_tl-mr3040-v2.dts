@@ -11,12 +11,15 @@
 	compatible = "tplink,tl-mr3040-v2", "qca,ar9331";
 
 	aliases {
+		serial0 = &uart;
 		led-boot = &led_lan;
 		led-failsafe = &led_lan;
 	};
 
 	leds {
 		compatible = "gpio-leds";
+		pinctrl-names = "default";
+		pinctrl-0 = <&switch_led_disable_pins>;
 
 		wlan {
 			label = "tp-link:green:wlan";
@@ -80,10 +83,6 @@
 };
 
 &uart {
-	status = "okay";
-};
-
-&gpio {
 	status = "okay";
 };
 
